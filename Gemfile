@@ -24,3 +24,5 @@ end
 gem 'omniauth-facebook'
 gem 'omniauth-twitter'
 gem 'omniauth-github'
+
+gem "koala", "~> 2.2"
