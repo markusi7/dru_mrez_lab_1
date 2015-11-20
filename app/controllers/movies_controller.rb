@@ -1,5 +1,7 @@
 class MoviesController < AuthorizedController
   def index
-       @user = User.get_movies(current_user.token)
+    resp = User.get_movies(current_user.token)
+
+    @movies = resp['movies']['data'].map { |movie| movie['name'] }
   end
 end

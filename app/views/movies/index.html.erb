@@ -1,1 +1,3 @@
-<%= @user %>
+<% @movies.each do |movie| %>
+  <%= HTTParty.get("http://www.omdbapi.com/?t=#{movie}&y=&plot=short&r=json") %>
+<% end %>
