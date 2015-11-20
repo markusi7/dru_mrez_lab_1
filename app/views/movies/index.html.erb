@@ -1,14 +1,19 @@
+MOVIES
+<table>
+  <tr>
+    <th>PICTURE</th>
+    <th>TITLE</th>
+    <th>YEAR</th>
+    <th>DURATION</th>
+    <th>PLOT</th>
+  </tr>
 <% @movies_info.each do |movie| %>
-  <%= movie.title %>
-  <br>
-  <%= movie.year %>
-  <br>
-  <%= movie.duration %>
-  <br>
-  <%= movie.plot %>
-  <br>
-  <%= movie.image %>
-  <br>
-  <br>
-  <br>
+  <tr>
+    <td><%= image_tag movie.image.to_s %></td>
+    <td><%=movie.title%></td>
+    <td><%=movie.year%></td>
+    <td><%=movie.duration%></td>
+    <td><%=movie.plot%></td>
+  </tr>
 <% end %>
+</table>

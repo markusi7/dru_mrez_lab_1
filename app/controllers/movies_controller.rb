@@ -9,6 +9,6 @@ class MoviesController < AuthorizedController
         MovieSerializer.new(
           HTTParty.get("http://www.omdbapi.com/?t=#{CGI::escape(movie)}&y=&plot=short&r=json")
         )
-      end.reject! { |m| m.title.nil? }
+      end
   end
 end
