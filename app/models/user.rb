@@ -21,8 +21,8 @@ class User
     end
   end
 
-  def self.get_music(access_token)
+  def self.get_movies(access_token)
     facebook = Koala::Facebook::API.new(access_token)
-    facebook.get_object("me", fields: "music")
+    facebook.get_object("me", fields: "movies")
   end
 end
