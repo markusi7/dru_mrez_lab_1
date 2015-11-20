@@ -1,3 +1,14 @@
-<% @movies.each do |movie| %>
-  <%= HTTParty.get("http://www.omdbapi.com/?t=#{movie}&y=&plot=short&r=json") %>
+<% @movies_info.each do |movie| %>
+  <%= movie.title %>
+  <br>
+  <%= movie.year %>
+  <br>
+  <%= movie.duration %>
+  <br>
+  <%= movie.plot %>
+  <br>
+  <%= movie.image %>
+  <br>
+  <br>
+  <br>
 <% end %>
