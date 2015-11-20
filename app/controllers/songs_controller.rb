@@ -1,4 +1,4 @@
-class SongsController < ApplicationController
+class SongsController < AuthorizedController
   def index
   end
 end
