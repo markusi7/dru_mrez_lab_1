@@ -23,6 +23,6 @@ class User
 
   def self.get_music(access_token)
     facebook = Koala::Facebook::API.new(access_token)
-    facebook.get_object("me?user_birthday")
+    facebook.get_object("me", fields: "music")
   end
 end
