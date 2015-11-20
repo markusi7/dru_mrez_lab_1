@@ -1,3 +1,23 @@
+USERS
+<table>
+  <tr>
+    <th>PICTURE</th>
+    <th>UID</th>
+    <th>NAME</th>
+    <th>EMAIL</th>
+    <th>PROVIDER</th>
+  </tr>
+<% @users.each do |user| %>
+  <tr>
+    <td><%= image_tag user.image.to_s %></td>
+    <td><%=user.uid%></td>
+    <td><%=user.name%></td>
+    <td><%=user.email%></td>
+    <td><%=user.provider%></td>
+  </tr>
+<% end %>
+</table>
+
 <form action="/auth/facebook" method="post">
 <input type="submit" value="Register with Facebook"/>
 </form>
